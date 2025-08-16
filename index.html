@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus3D | Immersive Digital Experiences</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="loader">
+        <div class="loader-cube">
+            <div class="loader-face loader-face-front"></div>
+            <div class="loader-face loader-face-back"></div>
+            <div class="loader-face loader-face-right"></div>
+            <div class="loader-face loader-face-left"></div>
+            <div class="loader-face loader-face-top"></div>
+            <div class="loader-face loader-face-bottom"></div>
+        </div>
+        <div class="loader-text">INITIALIZING 3D ENVIRONMENT</div>
+    </div>
+
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo" data-text="NEXUS3D">NEXUS3D</div>
+            <div class="navbar-links">
+                <a href="#home" class="nav-link active" data-text="HOME">HOME</a>
+                <a href="#about" class="nav-link" data-text="ABOUT">ABOUT</a>
+                <a href="#services" class="nav-link" data-text="SERVICES">SERVICES</a>
+                <a href="#work" class="nav-link" data-text="WORK">WORK</a>
+                <a href="#contact" class="nav-link" data-text="CONTACT">CONTACT</a>
+            </div>
+            <div class="navbar-hamburger">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu-container">
+            <a href="#home" class="mobile-nav-link active" data-text="HOME">HOME</a>
+            <a href="#about" class="mobile-nav-link" data-text="ABOUT">ABOUT</a>
+            <a href="#services" class="mobile-nav-link" data-text="SERVICES">SERVICES</a>
+            <a href="#work" class="mobile-nav-link" data-text="WORK">WORK</a>
+            <a href="#contact" class="mobile-nav-link" data-text="CONTACT">CONTACT</a>
+        </div>
+    </div>
+
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line"><span class="title-word">CREATE</span></span>
+                    <span class="title-line"><span class="title-word">IMMERSIVE</span></span>
+                    <span class="title-line"><span class="title-word">3D</span></span>
+                    <span class="title-line"><span class="title-word">EXPERIENCES</span></span>
+                </h1>
+                <p class="hero-subtitle">We craft cutting-edge 3D solutions that transform digital interactions into unforgettable journeys.</p>
+                <div class="hero-buttons">
+                    <a href="#work" class="btn-primary" data-text="VIEW WORK">VIEW WORK</a>
+                    <a href="#contact" class="btn-secondary" data-text="GET IN TOUCH">GET IN TOUCH</a>
+                </div>
+            </div>
+            <div class="hero-canvas">
+                <div class="hero-3d-object" id="hero-3d-object"></div>
+                <div class="hero-particles" id="hero-particles"></div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>SCROLL</span>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="section-header">
+            <h2 class="section-title" data-text="ABOUT US">ABOUT US</h2>
+            <p class="section-subtitle">Pushing the boundaries of digital experiences</p>
+        </div>
+        <div class="about-container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 class="about-title">We are a team of passionate designers and developers creating immersive 3D experiences</h3>
+                    <p>Founded in 2015, Nexus3D has been at the forefront of 3D web development, blending cutting-edge technology with artistic vision to create digital experiences that captivate and engage.</p>
+                    <p>Our team of award-winning designers, developers, and 3D artists work together to push the boundaries of what's possible on the web.</p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="150">0</div>
+                            <div class="stat-label">PROJECTS COMPLETED</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="40">0</div>
+                            <div class="stat-label">TEAM MEMBERS</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="12">0</div>
+                            <div class="stat-label">AWARDS WON</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="about-3d-object" id="about-3d-object"></div>
+                    <div class="about-image-overlay"></div>
+                </div>
+            </div>
+            <div class="about-skills">
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">3D Modeling</span>
+                        <span class="skill-percent">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="95%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">WebGL</span>
+                        <span class="skill-percent">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">Animation</span>
+                        <span class="skill-percent">92%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="92%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span class="skill-name">UI/UX Design</span>
+                        <span class="skill-percent">88%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="88%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="section-header">
+            <h2 class="section-title" data-text="OUR SERVICES">OUR SERVICES</h2>
+            <p class="section-subtitle">Transforming ideas into immersive realities</p>
+        </div>
+        <div class="services-container">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <div class="icon-3d" id="service-icon-1"></div>
+                    </div>
+                    <h3 class="service-title">3D Web Development</h3>
+                    <p class="service-description">We create fully interactive 3D websites and applications using WebGL, Three.js, and other cutting-edge technologies.</p>
+                    <a href="#" class="service-link" data-text="LEARN MORE">LEARN MORE</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <div class="icon-3d" id="service-icon-2"></div>
+                    </div>
+                    <h3 class="service-title">AR/VR Solutions</h3>
+                    <p class="service-description">Immersive augmented and virtual reality experiences that bridge the gap between digital and physical worlds.</p>
+                    <a href="#" class="service-link" data-text="LEARN MORE">LEARN MORE</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <div class="icon-3d" id="service-icon-3"></div>
+                    </div>
+                    <h3 class="service-title">Interactive Design</h3>
+                    <p class="service-description">Engaging user interfaces with smooth animations and micro-interactions that delight users.</p>
+                    <a href="#" class="service-link" data-text="LEARN MORE">LEARN MORE</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <div class="icon-3d" id="service-icon-4"></div>
+                    </div>
+                    <h3 class="service-title">Product Visualization</h3>
+                    <p class="service-description">High-fidelity 3D product renders and configurators that showcase your products in their best light.</p>
+                    <a href="#" class="service-link" data-text="LEARN MORE">LEARN MORE</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <div class="icon-3d" id="service-icon-5"></div>
+                    </div>
+                    <h3 class="service-title">Motion Graphics</h3>
+                    <p class="service-description">Dynamic animations and visual effects that bring your brand story to life.</p>
+                    <a href="#" class="service-link" data-text="LEARN MORE">LEARN MORE</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <div class="icon-3d" id="service-icon-6"></div>
+                    </div>
+                    <h3 class="service-title">3D Branding</h3>
+                    <p class="service-description">Complete 3D branding solutions including logos, visual identity, and marketing materials.</p>
+                    <a href="#" class="service-link" data-text="LEARN MORE">LEARN MORE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="showcase-section">
+        <div class="showcase-container">
+            <div class="showcase-slider">
+                <div class="showcase-slide active">
+                    <div class="showcase-content">
+                        <h3 class="showcase-title">Immersive E-commerce</h3>
+                        <p class="showcase-description">Revolutionizing online shopping with 3D product visualization and virtual try-on experiences.</p>
+                        <a href="#" class="btn-primary" data-text="VIEW CASE STUDY">VIEW CASE STUDY</a>
+                    </div>
+                    <div class="showcase-visual">
+                        <div class="showcase-3d" id="showcase-3d-1"></div>
+                    </div>
+                </div>
+                <div class="showcase-slide">
+                    <div class="showcase-content">
+                        <h3 class="showcase-title">Architectural Visualization</h3>
+                        <p class="showcase-description">Interactive 3D walkthroughs that bring architectural designs to life before construction begins.</p>
+                        <a href="#" class="btn-primary" data-text="VIEW CASE STUDY">VIEW CASE STUDY</a>
+                    </div>
+                    <div class="showcase-visual">
+                        <div class="showcase-3d" id="showcase-3d-2"></div>
+                    </div>
+                </div>
+                <div class="showcase-slide">
+                    <div class="showcase-content">
+                        <h3 class="showcase-title">Gaming Experiences</h3>
+                        <p class="showcase-description">Browser-based 3D games with stunning visuals and engaging gameplay mechanics.</p>
+                        <a href="#" class="btn-primary" data-text="VIEW CASE STUDY">VIEW CASE STUDY</a>
+                    </div>
+                    <div class="showcase-visual">
+                        <div class="showcase-3d" id="showcase-3d-3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="showcase-nav">
+                <div class="showcase-dots">
+                    <div class="showcase-dot active"></div>
+                    <div class="showcase-dot"></div>
+                    <div class="showcase-dot"></div>
+                </div>
+                <div class="showcase-arrows">
+                    <div class="showcase-arrow prev"><i class="fas fa-arrow-left"></i></div>
+                    <div class="showcase-arrow next"><i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="portfolio-section">
+        <div class="section-header">
+            <h2 class="section-title" data-text="OUR WORK">OUR WORK</h2>
+            <p class="section-subtitle">A showcase of our 3D projects</p>
+        </div>
+        <div class="portfolio-container">
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image" id="portfolio-3d-1"></div>
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">3D Product Configurator</h3>
+                            <p class="portfolio-category">E-commerce</p>
+                            <a href="#" class="portfolio-link" data-text="VIEW PROJECT">VIEW PROJECT</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image" id="portfolio-3d-2"></div>
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Virtual Showroom</h3>
+                            <p class="portfolio-category">Retail</p>
+                            <a href="#" class="portfolio-link" data-text="VIEW PROJECT">VIEW PROJECT</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image" id="portfolio-3d-3"></div>
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Architectural Walkthrough</h3>
+                            <p class="portfolio-category">Real Estate</p>
+                            <a href="#" class="portfolio-link" data-text="VIEW PROJECT">VIEW PROJECT</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image" id="portfolio-3d-4"></div>
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">Interactive Data Visualization</h3>
+                            <p class="portfolio-category">Technology</p>
+                            <a href="#" class="portfolio-link" data-text="VIEW PROJECT">VIEW PROJECT</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image" id="portfolio-3d-5"></div>
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">3D Brand Identity</h3>
+                            <p class="portfolio-category">Branding</p>
+                            <a href="#" class="portfolio-link" data-text="VIEW PROJECT">VIEW PROJECT</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image" id="portfolio-3d-6"></div>
+                        <div class="portfolio-overlay">
+                            <h3 class="portfolio-title">VR Training Simulation</h3>
+                            <p class="portfolio-category">Education</p>
+                            <a href="#" class="portfolio-link" data-text="VIEW PROJECT">VIEW PROJECT</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-button">
+                <a href="#" class="btn-primary" data-text="VIEW ALL PROJECTS">VIEW ALL PROJECTS</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section">
+        <div class="section-header">
+            <h2 class="section-title" data-text="CLIENT TESTIMONIALS">CLIENT TESTIMONIALS</h2>
+            <p class="section-subtitle">What our clients say about us</p>
+        </div>
+        <div class="testimonials-container">
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-avatar" id="testimonial-3d-1"></div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>Nexus3D transformed our e-commerce platform with their stunning 3D product visualizations. Our conversion rates increased by 40% after implementation.</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>Sarah Johnson</h4>
+                            <p>CEO, RetailTech</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" id="testimonial-3d-2"></div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>The architectural visualization they created for our new development helped us secure $20M in pre-sales. The quality and interactivity were beyond our expectations.</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>Michael Chen</h4>
+                            <p>Director, Urban Developments</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-avatar" id="testimonial-3d-3"></div>
+                    <div class="testimonial-content">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                            <p>Working with Nexus3D on our VR training simulation was a game-changer for our employee onboarding process. The engagement and retention rates have skyrocketed.</p>
+                            <i class="fas fa-quote-right"></i>
+                        </div>
+                        <div class="testimonial-author">
+                            <h4>David Rodriguez</h4>
+                            <p>CTO, TechCorp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials-nav">
+                <div class="testimonial-dots">
+                    <div class="testimonial-dot active"></div>
+                    <div class="testimonial-dot"></div>
+                    <div class="testimonial-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="achievements-section">
+        <div class="achievements-container">
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-number" data-count="12">0</h3>
+                        <p class="achievement-label">Industry Awards</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-number" data-count="25">0</h3>
+                        <p class="achievement-label">Countries Served</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-number" data-count="98">0</h3>
+                        <p class="achievement-label">Client Satisfaction</p>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-number" data-count="150">0</h3>
+                        <p class="achievement-label">Projects Completed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section">
+        <div class="section-header">
+            <h2 class="section-title" data-text="OUR TEAM">OUR TEAM</h2>
+            <p class="section-subtitle">Meet the creative minds behind our work</p>
+        </div>
+        <div class="team-container">
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="team-avatar" id="team-3d-1"></div>
+                    <div class="team-info">
+                        <h3 class="team-name">Alex Rivera</h3>
+                        <p class="team-position">Creative Director</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-avatar" id="team-3d-2"></div>
+                    <div class="team-info">
+                        <h3 class="team-name">Sophie Zhang</h3>
+                        <p class="team-position">Lead 3D Artist</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-artstation"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-avatar" id="team-3d-3"></div>
+                    <div class="team-info">
+                        <h3 class="team-name">Jamal Williams</h3>
+                        <p class="team-position">WebGL Developer</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-codepen"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="team-avatar" id="team-3d-4"></div>
+                    <div class="team-info">
+                        <h3 class="team-name">Elena Petrova</h3>
+                        <p class="team-position">UX Designer</p>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-behance"></i></a>
+                            <a href="#"><i class="fab fa-dribbble"></i></a>
+                            <a href="#"><i class="fab fa-medium"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <h2 class="section-title" data-text="GET IN TOUCH">GET IN TOUCH</h2>
+            <p class="section-subtitle">Let's create something amazing together</p>
+        </div>
+        <div class="contact-container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Our Office</h4>
+                            <p>123 Design Street, Creative District<br>San Francisco, CA 94107</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email Us</h4>
+                            <p>hello@nexus3d.com<br>jobs@nexus3d.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Call Us</h4>
+                            <p>+1 (555) 123-4567<br>+1 (555) 987-6543</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-social">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
+                </div>
+            </div>
+            <div class="contact-form">
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject">Subject</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" required></textarea>
+                        <label for="message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn-primary" data-text="SEND MESSAGE">SEND MESSAGE</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-section">
+        <div class="newsletter-container">
+            <div class="newsletter-content">
+                <h3 class="newsletter-title">Stay Updated</h3>
+                <p class="newsletter-text">Subscribe to our newsletter for the latest in 3D design and technology.</p>
+            </div>
+            <div class="newsletter-form">
+                <form id="newsletterForm">
+                    <div class="form-group">
+                        <input type="email" id="newsletterEmail" name="newsletterEmail" placeholder="Your email address" required>
+                        <button type="submit" class="btn-secondary" data-text="SUBSCRIBE">SUBSCRIBE</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <div class="footer-logo" data-text="NEXUS3D">NEXUS3D</div>
+                    <p class="footer-about-text">We create immersive 3D experiences that engage, inspire, and transform businesses.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title">Quick Links</h4>
+                        <ul>
+                            <li><a href="#home">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#work">Work</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Services</h4>
+                        <ul>
+                            <li><a href="#">3D Web Development</a></li>
+                            <li><a href="#">AR/VR Solutions</a></li>
+                            <li><a href="#">Product Visualization</a></li>
+                            <li><a href="#">Interactive Design</a></li>
+                            <li><a href="#">3D Branding</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title">Resources</h4>
+                        <ul>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Case Studies</a></li>
+                            <li><a href="#">Portfolio</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2023 Nexus3D. All rights reserved.</p>
+                </div>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
